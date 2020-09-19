@@ -7,7 +7,7 @@ keywords: 'Vim, Markdown, md-image-paste.vim'
 published: true
 ---
 
-![幸福]({{site.baseurl}}/_posts/409167387-167a422670ccd6e9.jpg)
+![幸福](/_posts/409167387-167a422670ccd6e9.jpg)
 我习惯使用 Vim 编辑 Markdown 文件，一直存在一个痛点就是粘贴图片很不方便。
 
 ## 前后对比
