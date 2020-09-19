@@ -4,14 +4,14 @@
 baseurl:
 url: https://www.scarypie.club
 date_format: "ordinal"
-title: JH's Blog
+title: Jinghuan's Blog
 subtitle: "公众号：闷骚的程序员"
 description: "景桓的个人博客"
 keywords: 景桓, Huan Jing, jinghuan, 程序员
 timezone: Asia/Baoding
 encoding: "utf-8"
 side_bar_repo_limit: 5
-repository: MazFactor/jinghuan
+repository: MazFactor/jinghuan.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
