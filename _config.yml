@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://http://www.scarypie.club/
+url: http://www.scarypie.club/
 date_format: "ordinal"
 title: 景桓
 subtitle: "公众号：闷骚的程序员"
