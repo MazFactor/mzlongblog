@@ -2,13 +2,13 @@
 layout: page
 title: About
 description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+keywords: Jinghuan Ma, 马景桓
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是马景桓，码而生，码而立。
 
 仰慕「优雅编码的艺术」。
 
