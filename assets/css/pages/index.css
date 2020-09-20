@@ -20,11 +20,11 @@
 }
 
 .home .site-header .site-header-nav-item {
-    color: rgba(255, 255, 255, .5)
+    color: #1a1a1a
 }
 
 .home .site-header .site-header-nav-item:hover {
-    color: #000
+    color: #777
 }
 
 
