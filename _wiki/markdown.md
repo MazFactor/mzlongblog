@@ -19,14 +19,14 @@ mindmap: true
 ### 超链接
 
 ```
-[靠谱-ing](https://mazhuang.org)
+[靠谱-ing](https://www.scarypie.club)
 
-<https://mazhuang.org>
+<https://www.scarypie.club>
 ```
 
-[靠谱-ing](https://mazhuang.org)  
+[靠谱-ing](https://www.scarypie.club)  
 
-<https://mazhuang.org>
+<https://www.scarypie.club>
 
 ### 列表
 

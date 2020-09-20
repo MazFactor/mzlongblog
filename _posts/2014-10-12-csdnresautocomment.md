@@ -72,9 +72,9 @@ CSDN 账号过一段时间就会累积几十个下载过但是未评论打分的
 
 ```python
 # File   : csdncommenter.py
-# Author : Zhuang Ma
+# Author : Jinghuan Ma
 # E-mail : chumpma(at)gmail.com
-# Website: https://mazhuang.org
+# Website: https://www.scarypie.club
 # Date   : 2016-07-26
 import requests
 from BeautifulSoup import BeautifulSoup
