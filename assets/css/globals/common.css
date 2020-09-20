@@ -86,6 +86,14 @@
     font-weight: 700
 }
 
+.article-header{
+    margin: 0;
+}
+
+.article-title{
+    margin: 0;
+}
+
 .site-header h1 a {
     white-space: nowrap;
     color: #333
