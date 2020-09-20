@@ -87,11 +87,17 @@
 }
 
 .article-header{
-    margin: 0;
+    padding: 10px 0;
 }
 
 .article-title{
-    margin: 0;
+    margin-top: 0;
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+article-meta-info{
+    margin-right: 15px;
 }
 
 .site-header h1 a {
