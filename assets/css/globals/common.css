@@ -87,7 +87,11 @@
 }
 
 .article-header{
-    padding: 10px 0;
+    padding: 0 0 25px 0;
+}
+
+.article-header h1{
+    margin-bottom: 5px;
 }
 
 .article-title{
@@ -96,7 +100,8 @@
     line-height: 1.5;
     font-weight: 400;
 }
-article-meta-info{
+.article-meta-info{
+    color: #777
     margin-right: 15px;
 }
 
