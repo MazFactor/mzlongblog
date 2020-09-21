@@ -1,7 +1,7 @@
 ---
 layout: post
 title: rouge-theme 代码高亮无效果的问题
-categories: blog
+categories: Blog
 description: 解决rouge theme代码高亮的问题
 keywords: Rouge-theme 代码高亮
 topmost: true
