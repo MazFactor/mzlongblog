@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: 本博客模板常见问题 Q & A
 categories: GitHub
@@ -73,4 +73,4 @@ mathjax: true
 
 - <https://github.com/mzlogin/rouge-themes>
 
-在项目主页可以看到每种风格的预览效果。
+在项目主页可以看到每种风格的预览效果。 -->
