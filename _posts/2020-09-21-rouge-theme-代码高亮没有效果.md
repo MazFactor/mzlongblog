@@ -6,7 +6,7 @@ description: 解决rouge theme代码高亮的问题
 keywords: Rouge-theme 代码高亮
 topmost: true
 ---
-markdown中代码块以“\`\`\`”（锐音符）开始和结尾，但是为了告诉markdown接下来的代码到底是java还是C#，或者是html则需要在开始的“\`\`\`”（锐音符）后面加上代码类型，如“```java”。如若不加则没有代码高亮效果。如下所示：
+markdown中代码块以“\`\`\`”（锐音符）开始和结尾，但是为了告诉markdown接下来的代码到底是java还是C#，或者是html则需要在开始的“\`\`\`”（锐音符）后面加上代码类型，如“```java”。如若不加则没有代码高亮效果<!-- more -->。如下所示：
 
 ```
 package com.viewscenes.netsupervisor.spi;
