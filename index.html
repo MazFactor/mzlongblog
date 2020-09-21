@@ -57,7 +57,7 @@ comments: false
                 </h3>
                 <p class="repo-list-description">
                 {% if post.content contains "<!-- more -->" %}
-                {{ post.content | split:"<!-- more -->" | first % }}
+                {{ post.content | split:"<!-- more -->" | first }}
                 <a href='{ {post.url}}' title='Read more...'>...[阅读全文]</a>
                 {% else %}
                 {{ post.excerpt | strip_html | strip }}
@@ -87,8 +87,8 @@ comments: false
                   <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                 </h3>
                 <p class="repo-list-description">
-                  {% if post.content contains "<!-- more -->" %}
-                {{ post.content | split:"<!-- more -->" | first % }}
+                {% if post.content contains "<!-- more -->" %}
+                {{ post.content | split:"<!-- more -->" | first }}
                 <a href='{ {post.url}}' title='Read more...'>...[阅读全文]</a>
                 {% else %}
                 {{ post.excerpt | strip_html | strip }}
