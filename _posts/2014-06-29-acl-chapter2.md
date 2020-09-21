@@ -6,7 +6,7 @@ description: 学习 ANSI Common Lisp 第二章欢迎来到 Lisp 的笔记。
 keywords: Lisp
 ---
 
-本文是个人对[第二章：欢迎来到 Lisp——ANSI Common Lisp 中文版](http://acl.readthedocs.org/en/latest/zhCN/ch2-cn.html) 一文中习题的解答。
+本文是个人对[第二章：欢迎来到 Lisp——ANSI Common Lisp 中文版](http://acl.readthedocs.org/en/latest/zhCN/ch2-cn.html) 一文中习题的解答<!-- more -->。
 
 **1. 描述下列表达式求值之后的结果：**
 

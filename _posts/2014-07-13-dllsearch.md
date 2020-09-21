@@ -17,7 +17,7 @@ keywords: Dll, Windows
 5. 进程的当前目录。
 6. PATH 环境变量中所列出的目录。
 
-如果调用 LoadLibrary 时传入的是绝对路径，那么加载程序将只尝试从该绝对路径搜索 DLL。
+如果调用 LoadLibrary 时传入的是绝对路径，那么加载程序将只尝试从该绝对路径搜索 DLL<!-- more -->。
 
 ### 附注
 
