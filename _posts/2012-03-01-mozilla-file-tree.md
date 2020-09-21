@@ -21,7 +21,7 @@ keywords: Mozilla
 
 这份文档包含 SeaMonkey，Firefox 和 Toolkit 的相关材料。
 
-这是一份根据 Mozilla 的源码树按月更新的文档。
+这是一份根据 Mozilla 的源码树按月更新的文档<!-- more -->。
 
 在 Mozilla Source Code Directory Structure 和 more detailed overview of how the parts of Gecko fit together 可以看到相似的内容。
 

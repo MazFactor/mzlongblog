@@ -8,7 +8,7 @@ keywords: Fiddler, WinHTTP
 
 ### 背景
 
-发现使用 Fiddler 进行抓包时有一部分请求总是没抓到，查看了一下源代码，发现使用 WinINET 这套 API 发送的请求都能正常抓到，而使用 WinHTTP 这套 API 发送的请求都没有抓到，遂搜索了一下，果然前人们早已给出答案，解决方案原文可以参看 Fiddler 作者 Eric Lawrence 大神的一篇博客 [Using Fiddler with WinHTTP](http://blogs.telerik.com/fiddler/posts/13-04-29/using-fiddler-with-winhttp)，博客里表示 Fiddler 对各种 HTTP(s) stacks 都是能支持的，只是默认启动时只是接管了 WinINET 代理设置。
+发现使用 Fiddler 进行抓包时有一部分请求总是没抓到，查看了一下源代码，发现使用 WinINET 这套 API 发送的请求都能正常抓到，而使用 WinHTTP 这套 API 发送的请求都没有抓到，遂搜索了一下，果然前人们早已给出答案，解决方案原文可以参看 Fiddler 作者 Eric Lawrence 大神的一篇博客 [Using Fiddler with WinHTTP](http://blogs.telerik.com/fiddler/posts/13-04-29/using-fiddler-with-winhttp)，博客里表示 Fiddler <!-- more -->对各种 HTTP(s) stacks 都是能支持的，只是默认启动时只是接管了 WinINET 代理设置。
 
 Eric 的那篇博客里已经列出了相关的方法和代码，本文只是对其略做改进，让同一段代码可以适配不同的 Windows 版本。
 

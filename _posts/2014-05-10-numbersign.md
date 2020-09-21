@@ -32,7 +32,7 @@ int main()
     return 0;
 }
 ```
-
+<!-- more -->
 输出为：
 
 ```

@@ -19,7 +19,7 @@ keywords: Windows, Skill
 
 先说方法：
 
-将如下代码保存为 .reg 文件然后执行即可。
+将如下代码保存为 .reg 文件然后执行即可<!-- more -->。
 
 ```
 Windows Registry Editor Version 5.00

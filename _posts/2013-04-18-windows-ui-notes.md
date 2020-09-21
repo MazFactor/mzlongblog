@@ -16,7 +16,7 @@ keywords: Windows, UI
 
 1. 禁止双击标题栏最大化窗口
 
-   屏蔽 WM\_NCLBUTTONDBLCLK 消息
+   屏蔽 WM\_NCLBUTTONDBLCLK 消息<!-- more -->
 
 1. 禁止 XP 下右键任务栏的「最大化」菜单项
 

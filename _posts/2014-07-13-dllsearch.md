@@ -13,7 +13,7 @@ keywords: Dll, Windows
 1. 包含可执行文件的目录。
 2. Windows 的系统目录，该目录可以通过 GetSystemDirectory 得到，一般为 System32 目录，若为 32 位程序跑在 64 位系统下，则为 SysWOW64 目录。
 3. 16 位的系统目录，即 Windows 目录中的 System 目录。
-4. Windows 目录，该目录可以通过 GetWindowsDirectory 得到。
+4. Windows 目录，该目录可以通过 GetWindowsDirectory 得到<!-- more -->。
 5. 进程的当前目录。
 6. PATH 环境变量中所列出的目录。
 

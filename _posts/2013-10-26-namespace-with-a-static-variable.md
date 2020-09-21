@@ -17,7 +17,7 @@ namespace NS1
 }
 void print_var();
 ```
-
+<!-- more -->
 *src.cpp*
 
 ```cpp
