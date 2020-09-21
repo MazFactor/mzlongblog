@@ -153,3 +153,8 @@ google:
         sidebar: true 
         content_header: true
         content_footer: false
+# ---------------- #
+#      有文件更新   #
+#      就更新站点   #
+# ---------------- #
+auto: true
