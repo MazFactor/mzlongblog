@@ -119,34 +119,49 @@ comments: false
         </div>
     </div>
     <div class="pagination text-align">
-      <div class="btn-group">
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-              <a href="{{ site.url }}/" class="btn btn-outline">&laquo;</a>
-          {% else %}
-              <a href="{{ site.url }}/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
-          {% endif %}
-        {% else %}
-            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
-        {% endif %}
+      <div id="post-pagination" class="pagination">
         {% if paginator.page == 1 %}
-            <a href="javascript:;" class="active btn btn-outline">1</a>
+          <span class="page-numbers current">1</span>
         {% else %}
-            <a href="{{ site.url }}/"  class="btn btn-outline">1</a>
+          <a class="page-numbers" href="/">1</a>
         {% endif %}
-        {% for count in (2..paginator.total_pages) %}
+    
+        {% assign pageSize = 2 %}
+        {% assign startPage = paginator.page | minus:pageSize %}
+        {% if 2 > startPage %}
+          {% assign startPage = 2 %}
+        {% endif %}
+        {% assign endPage = paginator.page | plus:pageSize %}
+        {% if endPage >= paginator.total_pages %}
+          {% assign endPage = paginator.total_pages | minus:1 %}
+        {% endif %}
+    
+        {% assign pageTemp = pageSize | plus:2 %}
+        {% if paginator.page > pageTemp %}
+          <span class="page-numbers dots">…</span>
+        {% endif %}
+    
+        {% for count in (startPage..endPage) %}
           {% if count == paginator.page %}
-              <a href="javascript:;"  class="active btn btn-outline">{{count}}</a>
+            <span class="page-numbers current">{{ count }}</span>
           {% else %}
-              <a href="{{ site.url }}/page{{count}}"  class="btn btn-outline">{{count}}</a>
+            <a class="page-numbers" href="/page{{ count }}">{{ count }}</a>
           {% endif %}
         {% endfor %}
-        {% if paginator.next_page %}
-            <a href="{{ site.url }}/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
-        {% else %}
-            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
+    
+        {% assign pageTemp1 = pageSize | plus:1 %}
+        {% assign pageTemp = paginator.page | plus:pageTemp1 %}
+        {% if paginator.total_pages > pageTemp %}
+          <span class="page-numbers dots">…</span>
         {% endif %}
-        </div>
+    
+        {% if paginator.page == paginator.total_pages %}
+          <span class="page-numbers current">{{paginator.total_pages}}</span>
+        {% else %}
+          <a class="page-numbers" href="/page{{paginator.total_pages}}/">{{paginator.total_pages}}</a>
+        {% endif %}
+    
+      </div>
     </div>
     <!-- /pagination -->
 </section>
