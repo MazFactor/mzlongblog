@@ -158,4 +158,4 @@ google:
 #      就更新站点   #
 # ---------------- #
 auto: true
-excerpt_separator:  '<!-- more -->'
+# excerpt_separator:  '<!-- more -->'
