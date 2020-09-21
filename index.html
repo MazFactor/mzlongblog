@@ -87,7 +87,13 @@ comments: false
                   <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                 </h3>
                 <p class="repo-list-description">
-                {{ post.excerpt | strip_html | strip }}
+                  {% if post.content contains '<!-- more -->' %}
+                  {{ post.content | split:'<!-- more -->'' | first }}
+                  <a href='{{ site.url }}{{ post.url }}' title='Read more...' style="font-size: 14px;">...[阅读全文]</a>
+                  {% else %}
+                  {{ post.excerpt | strip_html | strip }}
+                  {% endif %}
+                <!-- {{ post.excerpt | strip_html | strip }} -->
                 </p>
                 <p class="repo-list-meta">
                 <span class="meta-info">
