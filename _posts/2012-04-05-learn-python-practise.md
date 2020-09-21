@@ -26,7 +26,7 @@ keywords: Python
 str = raw_input('input a str:')
 print str
 ```
-<!-- more -->
+
 (b)
 
 ```python

@@ -24,7 +24,7 @@ int main()
 }
 ```
 
-然后编译两工程生成 Proj1.exe 和 Proj2.exe，期望的结果是 Proj1.exe 输出`output by proj1`，Proj2 输出`output by proj2`，但是……意外发生了<!-- more -->：
+然后编译两工程生成 Proj1.exe 和 Proj2.exe，期望的结果是 Proj1.exe 输出`output by proj1`，Proj2 输出`output by proj2`，但是……意外发生了：
 
 *会发现一定的概率下，两个 exe 输出的内容相同，至于是`output by proj1`还是`output by proj2`则比较随机。*
 

@@ -20,7 +20,7 @@ keywords: C++
 先来看看有与没有虚函数的类的对象的内存结构的不同之处：
 
 **无虚函数的对象**
-<!-- more -->
+
 内存结构：
 
 ![Object with no virtual function](/images/posts/cplusplus/objectwithnovirtual.png)

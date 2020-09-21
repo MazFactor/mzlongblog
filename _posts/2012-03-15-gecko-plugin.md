@@ -8,7 +8,7 @@ keywords: Gecko, Mozilla, Plugin
 
 昨日在 JumuFENG 同学建的 firefox 交流群 (81424441) 里与群友们说起插件相关的一些东西，自己在本地测试了一下，然后推论出一些粗浅认识总结如下：（欢迎有兴趣和正在进行 mozilla 相关的一些开发的朋友加群交流）
 
-一般来讲，对于 firefox 和其它内嵌 Gecko 内核的应用程序来讲，其插件的注册和搜索的机制应该与如下内容有关（windows 下）<!-- more -->:
+一般来讲，对于 firefox 和其它内嵌 Gecko 内核的应用程序来讲，其插件的注册和搜索的机制应该与如下内容有关（windows 下）:
 
 (1) 程序会优先考虑可执行文件同级的 plugins 目录下的 DLL 等类型文件，判断文件的命名是否符合插件特征且通过某种机制确定其是否为插件。命名规范：如 flash 插件的 dll 名为 NPSWF32.DLL，改成 asdfjljlk.dll 则无法识别，NPSWF311112.dll 这种则可以识别，NPSWFjkljdlfkj32.dll 这种可以识别，N1PSWF32.dll 无法识别。
 

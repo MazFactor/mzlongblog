@@ -21,7 +21,7 @@ keywords: API
 **风险：**
 
 在 DLL 中调用时，若传入的 instance 参数为 NULL，那获取的将是加载 DLL 的进程的 EXE 的路径，若需要获取 DLL 的路径，传入的 instance 参数需为 DLL 的 hModule。
-<!-- more -->
+
 ### RegQueryValueEx
 
 **风险：**

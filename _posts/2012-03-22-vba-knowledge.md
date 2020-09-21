@@ -21,7 +21,7 @@ Workbooks(1)
 ```vbnet
 Workbooks("1.xlsx")
 ```
-<!-- more -->
+
 ### 创建一个 EXCEL 工作簿对象
 
 ```vbnet
