@@ -43,7 +43,4 @@
 .pagination .page-numbers.current{ background: #4183C4;color:#fff;}	
 .pagination .page-numbers.dots{border-color:rgba(0,0,0,0)}
 
-/*For wiki*/
-.columns .collection-header{
-    font-size: 40px;
-}
+/*For wiki.html*/
