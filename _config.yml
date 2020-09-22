@@ -12,7 +12,7 @@ timezone: Asia/Baoding
 encoding: "utf-8"
 side_bar_repo_limit: 5
 repository: MazFactor/jinghuan
-# 对 css 和 js 资源的 cdn 加速配置
+# 对 css 和 js 资源的 cdn 加速配置3
 cdn:
     jsdelivr:
         enabled: false
