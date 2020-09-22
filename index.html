@@ -119,13 +119,7 @@ comments: false
         </div>
     </div>
     <div class="pagination text-align">
-      <div id="post-pagination" class="pagination">
-        {% if paginator.page == 1 %}
-          <span class="page-numbers current">1</span>
-        {% else %}
-          <a class="page-numbers" href="/">1</a>
-        {% endif %}
-    
+      <div id="post-pagination" class="pagination">  
         {% assign pageSize = 2 %}
         {% assign startPage = paginator.page | minus:pageSize %}
         {% if 2 > startPage %}
