@@ -121,9 +121,9 @@ comments: false
     <div class="pagination text-align">
       <div id="post-pagination" class="pagination">
         {% if paginator.page == 1 %}
-          <span class="page-numbers current">1.0</span>
+          <span class="page-numbers current">1</span>
         {% else %}
-          <a class="page-numbers" href="/">1.1</a>
+          <a class="page-numbers" href="/">1</a>
         {% endif %}
     
         {% assign pageSize = 2 %}
@@ -143,9 +143,9 @@ comments: false
     
         {% for count in (startPage..endPage) %}
           {% if count == paginator.page %}
-            <span class="page-numbers current">{{ count }}.2</span>
+            <span class="page-numbers current">{{ count }}</span>
           {% else %}
-            <a class="page-numbers" href="/page{{ count }}">{{ count }}.3</a>
+            <a class="page-numbers" href="/page{{ count }}">{{ count }}</a>
           {% endif %}
         {% endfor %}
     
@@ -157,7 +157,7 @@ comments: false
     
         {% if paginator.page == paginator.total_pages %}
           {% if paginator.total_pages > 1 %}
-            <span class="page-numbers current">{{paginator.total_pages}}.4</span>
+            <span class="page-numbers current">{{paginator.total_pages}}</span>
           {% endif %}
         {% else %}
           <a class="page-numbers" href="/page{{paginator.total_pages}}/">{{paginator.total_pages}}.5</a>
