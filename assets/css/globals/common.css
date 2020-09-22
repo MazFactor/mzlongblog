@@ -761,4 +761,5 @@ img + em {
 /*For wiki.html*/
 .collection-title .collection-header{
     font-size: 40px;
+    color: red;
 }
