@@ -760,8 +760,8 @@ img + em {
 }
 /*For wiki.html*/
 .wiki-title {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .wiki-title .wiki-header{
-    font-size: 40px;
+    font-size: 45px;
 }
