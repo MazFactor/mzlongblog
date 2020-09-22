@@ -44,6 +44,6 @@
 .pagination .page-numbers.dots{border-color:rgba(0,0,0,0)}
 
 /*For wiki*/
-.columns .collection-title h1{
+.columns .collection-header{
     font-size: 40px;
 }
