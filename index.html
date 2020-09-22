@@ -123,7 +123,7 @@ comments: false
         {% if paginator.page == 1 %}
           <span class="page-numbers current">1.0</span>
         {% else %}
-          <a class="page-numbers" href="/">1</a>
+          <a class="page-numbers" href="/">1.1</a>
         {% endif %}
     
         {% assign pageSize = 2 %}
@@ -143,11 +143,9 @@ comments: false
     
         {% for count in (startPage..endPage) %}
           {% if count == paginator.page %}
-            {% if count != 1 %}
-              <span class="page-numbers current">{{ count }}</span>
-            {% endif %}  
+            <span class="page-numbers current">{{ count }}.2</span>
           {% else %}
-            <a class="page-numbers" href="/page{{ count }}">{{ count }}</a>
+            <a class="page-numbers" href="/page{{ count }}">{{ count }}.3</a>
           {% endif %}
         {% endfor %}
     
@@ -158,9 +156,9 @@ comments: false
         {% endif %}
     
         {% if paginator.page == paginator.total_pages %}
-          <span class="page-numbers current">{{paginator.total_pages}}</span>
+          <span class="page-numbers current">{{paginator.total_pages}}.4</span>
         {% else %}
-          <a class="page-numbers" href="/page{{paginator.total_pages}}/">{{paginator.total_pages}}</a>
+          <a class="page-numbers" href="/page{{paginator.total_pages}}/">{{paginator.total_pages}}.5</a>
         {% endif %}
     
       </div>
