@@ -759,6 +759,9 @@ img + em {
   color: grey;
 }
 /*For wiki.html*/
-.collection-title .collection-header{
+.wiki-title {
+    margin-bottom: 15px;
+}
+.wiki-title .wiki-header{
     font-size: 40px;
 }
