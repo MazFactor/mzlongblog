@@ -156,7 +156,9 @@ comments: false
         {% endif %}
     
         {% if paginator.page == paginator.total_pages %}
-          <span class="page-numbers current">{{paginator.total_pages}}.4</span>
+          {% if paginator.total_pages > 1 %}
+            <span class="page-numbers current">{{paginator.total_pages}}.4</span>
+          {% endif %}
         {% else %}
           <a class="page-numbers" href="/page{{paginator.total_pages}}/">{{paginator.total_pages}}.5</a>
         {% endif %}
