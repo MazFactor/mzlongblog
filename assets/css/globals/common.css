@@ -758,3 +758,7 @@ div.footnotes::before {
 img + em {
   color: grey;
 }
+/*For wiki.html*/
+.collection-title .collection-header{
+    font-size: 40px;
+}
