@@ -143,7 +143,9 @@ comments: false
     
         {% for count in (startPage..endPage) %}
           {% if count == paginator.page %}
-            <span class="page-numbers current">{{ count }}</span>
+            {% if count != 1 %}
+              <span class="page-numbers current">{{ count }}</span>
+            {% endif %}  
           {% else %}
             <a class="page-numbers" href="/page{{ count }}">{{ count }}</a>
           {% endif %}
