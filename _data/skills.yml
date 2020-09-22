@@ -1,4 +1,4 @@
-- name: 语言
+- name: 软件开发
   keywords:
       - Java
       - C++
@@ -6,3 +6,9 @@
       - Html
       - JavaScrapt
       - CSS
+
+- name: 软件测试
+  keywords:
+      - 接口（自动化）
+      - 性能
+      - GUI（自动化）
