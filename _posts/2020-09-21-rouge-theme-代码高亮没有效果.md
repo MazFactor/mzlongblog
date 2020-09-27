@@ -24,4 +24,4 @@ public interface SPIService {
 }
 ```
 
-刚开始使用jekyll + github pages + rouge的时候遇到的问题，后来看了别人写的文章后大悟，特此记下以备后用！
+刚开始使用jekyll + github pages + rouge的时候遇到的问题，后来看了别人写的文章后才比对出来，特此记下以备后用！
