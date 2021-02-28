@@ -56,7 +56,7 @@ struct pt_regs *regs, unsigned long stack_size)
 
 #### 1.CLONE_VM
 do_fork()需要调用copy_mm()来设置task_struct中的mm和active_mm项，这两个mm_struct数据与进程所关联的内存空间相对应。如果do_fork()时指定了CLONE_VM开关，copy_mm()将把新的 task_struct中的mm和active_mm设置成与current的相同，同时提高该mm_struct的使用者数目 （mm_struct::mm_users）。也就是说，轻量级进程与父进程共享内存地址空间，由下图示意可以看出mm_struct在进程中的地位：
-![Java虚拟机运行时数据区]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/进程task_struct数据结构.jpg)
+![进程task_struct数据结构]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/进程task_struct数据结构.jpg)
 <center>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">进程task_struct数据结构</div>
 </center>
@@ -81,7 +81,7 @@ LinuxThreads定义了一个struct _pthread_descr_struct数据结构来描述线�
 
 struct _pthread_descr_struct是一个双环链表结构，__pthread_manager_thread所在的链表仅包括它一个元素，实际上，__pthread_manager_thread是一个特殊线程，LinuxThreads仅使用了其中的errno、p_pid、p_priority等三个域。而__pthread_main_thread所在的链则将进程中所有用户线程串在了一起。经过一系列pthread_create()之后形成的__pthread_handles数组将如下图所示：
 
-![Java虚拟机运行时数据区]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/_pthread_handles数组结构.jpg)
+![_pthread_handles数组结构]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/_pthread_handles数组结构.jpg)
 <center>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">_pthread_handles数组结构</div>
 </center>
@@ -98,7 +98,7 @@ LinuxThreads遵循POSIX1003.1c标准，其中对线程库的实现进行了一�
 
 创建管理线程的流程如下所示：（全局变量pthread_manager_request初值为-1）
 
-![Java虚拟机运行时数据区]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/创建管理线程的流程.jpg)
+![创建管理线程的流程]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/创建管理线程的流程.jpg)
 <center>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">创建管理线程的流程</div>
 </center>
@@ -115,7 +115,7 @@ __pthread_manager()就是管理线程的主循环所在，在进行一系列初�
 
 在FLOATING_STACK方式下，LinuxThreads利用mmap()从内核空间中分配8MB空间（i386系统缺省的最大栈空间大小，如果有运行限制（rlimit），则按照运行限制设置），使用mprotect()设置其中第一页为非访问区。该8M空间的功能分配如下图：
 
-![Java虚拟机运行时数据区]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/栈结构示意.jpg)
+![栈结构示意]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/栈结构示意.jpg)
 <center>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">栈结构示意</div>
 </center>
