@@ -190,7 +190,7 @@ Linux中很多系统调用，按照语义都是与进程相关的，比如nice�
 ---
 LinuxThreads的问题，特别是兼容性上的问题，严重阻碍了Linux上的跨平台应用（如Apache）采用多线程设计，从而使得Linux上的线程应用一直保持在比较低的水平。在Linux社区中，已经有很多人在为改进线程性能而努力，其中既包括用户级线程库，也包括核心级和用户级配合改进的线程库。目前最为人看好的有两个项目，一个是RedHat公司牵头研发的NPTL（Native Posix Thread Library），另一个则是IBM投资开发的NGPT（Next Generation Posix Threading），二者都是围绕完全兼容POSIX 1003.1c，同时在核内和核外做工作以而实现多对多线程模型。这两种模型都在一定程度上弥补了LinuxThreads的缺点，且都是重起炉灶全新设计的。
 
-#### 1.NPTL
+#### 5.NPTL
 NPTL的设计目标可归纳为以下几点：
 >POSIX兼容性<br>
 >SMP结构的利用<br>
@@ -206,12 +206,12 @@ NPTL的设计目标可归纳为以下几点：
 
 主要是因为核心的问题，NPTL仍然不是100%POSIX兼容的，但就性能而言相对LinuxThreads已经有很大程度上的改进了。
 
-#### 2.NGPT
+#### 6.NGPT
 IBM的开放源码项目NGPT在2003年1月10日推出了稳定的2.2.0版，但相关的文档工作还差很多。就目前所知，NGPT是基于GNU Pth（GNU Portable Threads）项目而实现的M:N模型，而GNU Pth是一个经典的用户级线程库实现。
 
 按照2003年3月NGPT官方网站上的通知，NGPT考虑到NPTL日益广泛地为人所接受，为避免不同的线程库版本引起的混乱，今后将不再进行进一步开发，而今进行支持性的维护工作。也就是说，NGPT已经放弃与NPTL竞争下一代Linux POSIX线程库标准。
 
-#### 3.其他高效线程机制
+#### 7.其他高效线程机制
 此处不能不提到Scheduler Activations。这个1991年在ACM上发表的多线程内核结构影响了很多多线程内核的设计，其中包括Mach3.0、NetBSD和商业版本Digital Unix（现在叫Compaq True64 Unix）。它的实质是在使用用户级线程调度的同时，尽可能地减少用户级对核心的系统调用请求，而后者往往是运行开销的重要来源。采用这种结构的线程机制，实际上是结合了用户级线程的灵活高效和核心级线程的实用性，因此，包括Linux、FreeBSD在内的多个开放源码操作系统设计社区都在进行相关研究，力图在本系统中实现Scheduler Activations。
 
 <br>
