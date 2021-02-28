@@ -81,7 +81,7 @@ LinuxThreads定义了一个struct _pthread_descr_struct数据结构来描述线�
 
 struct _pthread_descr_struct是一个双环链表结构，__pthread_manager_thread所在的链表仅包括它一个元素，实际上，__pthread_manager_thread是一个特殊线程，LinuxThreads仅使用了其中的errno、p_pid、p_priority等三个域。而__pthread_main_thread所在的链则将进程中所有用户线程串在了一起。经过一系列pthread_create()之后形成的__pthread_handles数组将如下图所示：
 
-![_pthread_handles数组结构]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/_pthread_handles数组结构.jpg)
+![_pthread_handles数组结构]({{site.assets_base_url}}/images/blog/深入理解Java虚拟机/Chapter1/LinuxThreads实现机制分析/创建管理线程的流程.jpg)
 <center>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">_pthread_handles数组结构</div>
 </center>
