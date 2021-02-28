@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 深入理解Java虚拟机笔记（一）（附录2）-LinuxThreads实现机制分析
-categories: LinuxThreads
+categories: Linux
 description: LinuxThreads实现机制分析
 keywords: LinuxThreads
 ---
