@@ -65,9 +65,13 @@ spring auto scan 配置，在编辑情况下，无法找不到对应的bean，�
 
 解决办法：
 	
-> 错误导包 import com.alibaba.dubbo.config.annotation.Service;
+错误导包
 
-正确的包应该是下面这个:
+```java
+import com.alibaba.dubbo.config.annotation.Service;
+```
+
+正确的包应该是下面这个
 
 ```java	
 import org.springframework.stereotype.Service;
