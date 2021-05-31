@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Boot + Vue全栈开发实战 - Chapter01 - 开发第一个Spring Boot程序
+title: Spring Boot + Vue全栈开发实战 - Chapter02 - SpringBoot基础配置
 categories: SpringBoot
 description: Spring Boot + Vue全栈开发实践
 keywords: Springboot 实战
