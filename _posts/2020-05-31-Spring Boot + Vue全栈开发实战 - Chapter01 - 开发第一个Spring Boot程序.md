@@ -73,11 +73,11 @@ public class App {
 
 代码解释：
 
-* @EnableAutoConfiguration 注解表示开户自动化配置。由于项目中添加了 spring-boot-starter-web 依赖，因此在开户了自动化配置之后 会自动进行 Spring 和 SpringMVC 的配置。
+* @EnableAutoConfiguration 注解表示开户自动化配置。由于项目中添加了 spring-boot-starter-web 依赖，因此在开启了自动化配置之后会自动进行 Spring 和 SpringMVC 的配置。
 
 *在 Java 项目的 main 方法中，通过 SpringApplication 中的 run 方法启动项目。第一个参数传入App.class，告诉Spring哪个是主要组件。第二个参数是运行时输入的其他参数。
 
-接下来创建一个SpringMVCk中的控制器 —— HelloController，代码如下：
+接下来创建一个SpringMVC中的控制器 —— HelloController，代码如下：
 
 ```java
 @RestController
