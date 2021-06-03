@@ -73,7 +73,7 @@ spring:
 
 这是Spring Boot 自带的处理方式，如果采用这种方式，对于字段忽略、日期格式化等常见需求都可以通过注解来解决。通过Spring中默认提供的MappingJackson2HttpMessageConverter来实现，当然这里可以根据实际需要自定义JSON转换器。
 
-### 自定义转换器
+### 返回JSON数据
 #### Gson
 常见的JSON处理器除了jackson-databind之外还有Google的开源框架Gson和阿里的Fastjson。在使用Gson或Fastjson之前需要除去默认的jackson-databind，然后引入Gson或者Fastjosn依赖。
 
@@ -252,6 +252,10 @@ public class MyWebMvcConfig Implements WebMvcConfigurer {
 
 > 如果使用了Gson，也可以采用这种方式配置，但是不推荐。因为当项目中没有GsonHttpMessageConverter 时， Spring Boot 自己会提供一个GsonHttpMessageConverter，此时重写configureMessageConverters 方法， 参数converters 中已经有GsonHttpMessageConverter的实例了，需要替换已有的GsonHttpMessageConverter 实例，操作比较麻烦，所以对于Gson，推荐直接提供GsonHttpMessageConverter。
 
+最后附上一张项目类图：
+![项目涉及类图]({{assets_base_url}}/images/blog/SpringBoot+Vue全栈开发实战/chapter03/项目涉及类图.jpg)
+
+
 ### 静态资源访问
 在SpringMVC中，对于静态资源都需要开发人员手动配置静态资源过滤。Spring Boot中对此也提供了自动化配置，可以简化静态资源过滤配置。
 
@@ -310,4 +314,31 @@ return locations ;
 #### 自定义策略
 如果默认的静态资源过滤策略不能满足开发需求，也可以自定义静态资源过滤策略，静态资源过滤策略有以下两种方式：
 
-1.
+1.在配置文件中定义
+
+可以在application.peroperties中直接定义过滤规则和静态资源位置，代码如下：
+
+```xml
+spring.mvc.static-path-pattern=/static/**
+spring.resources.static-location=classpath:/static/
+```
+
+如上，过滤规则为/static/**，静态资源位置为classpath:/static/。重新启动项目，在浏览器中输入“http://localhost:8080/static/p1.png”即可看到classpath:/static/目录下的资源。
+
+2.Java编码定义
+
+也可以通过Java编码方式定义，只需实现WebMvcConfigurer接口即可，然后实现该接口的addResourcHandlers方法，代码如下：
+
+```java
+@Configuration
+public class MyWebMvcConfig implements WebMvcConfigurer {
+  @Override
+  public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry
+            .addResourceHandler("/static/**")
+            .addResourceLocations("classpath:/static/");
+  }
+}
+```
+
+### 文件上传
