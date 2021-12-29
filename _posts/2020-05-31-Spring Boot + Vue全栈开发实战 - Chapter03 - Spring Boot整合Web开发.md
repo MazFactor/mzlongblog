@@ -311,6 +311,8 @@ return locations ;
 
 此时，在浏览器中输入“http://localhost:8080/p1.png”即可看到classpath:/META-INF/resources/目录下的pl.png，如果将classpath:/META-INF/resources/目录下的pl.png 删除，就会访问到classpath:/resources/目录下的pl.png，以此类推。
 
+如果使用Intellij IDEA创建Spring Boot 项目，则会默认创建出classpath:/static/ 目录，静态资源一般放在这个目录下即可。
+
 #### 自定义策略
 如果默认的静态资源过滤策略不能满足开发需求，也可以自定义静态资源过滤策略，静态资源过滤策略有以下两种方式：
 
