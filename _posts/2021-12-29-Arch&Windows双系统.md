@@ -5,8 +5,6 @@ categories: 操作系统
 description: Arch&Win10双系统安装及相关知识
 keywords: Archlinux 双系统
 ---
-# Arch&Win10双系统安装及相关知识
-
 ## 双系统
 
 #### 前置
